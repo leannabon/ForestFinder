@@ -2,10 +2,10 @@
 
 Basic Requirements
     1. Homepage
-        a) Highlights simple organization
-        b) Links to two pages
-            - National Parks Search Page
-            - Mountains Information Page
+        ✅) Highlights simple organization
+        ✅) Links to two pages
+            ✅ National Parks Search Page
+            ✅ Mountains Information Page
     
     2. National Parks Search Page
         a) Search engine
