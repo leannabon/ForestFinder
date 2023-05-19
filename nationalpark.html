@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National park - Enjoy the outdoors</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="index.html">Index</a>
+                <a href="nationpark.html">National park</a>
+                <a href="mountains.html">Mountains</a>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <select id="states"></select>
+        <select id="parktype"></select>
+
+        <input type="text" name="searchLocation" id="inputLocation">
+        <button type="button" onclick="searchLocation()">Search by location</button>
+        <br>
+        <br>
+
+    </main>
+
+    <script src="scripts/locationData.js"></script>
+    <script src="scripts/parkTypeData.js"></script>
+    <script src="scripts/nationalParkData.js"></script>
+    <script src="scripts/app.js"></script>
+
+</body>
+
+</html>

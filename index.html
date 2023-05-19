@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ForestFinder - Enjoy the outdoors</title>
+    <!-- 🌼 Insert Favicon -->
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-success">
+        <div class="container">
+          <a class="navbar-brand" href="#">ForestFinder</a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html" aria-current="page"
+                  >Home <span class="visually-hidden">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nationalpark.html">National Park</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mountains.html">Mountains</a>
+              </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0">
+              <input
+                class="form-control me-sm-2"
+                type="text"
+                placeholder="Search"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="homeCarousel">
+        <div
+          id="carouselId"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-bs-target="#carouselId"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="First slide"
+            ></li>
+            <li
+              data-bs-target="#carouselId"
+              data-bs-slide-to="1"
+              aria-label="Second slide"
+            ></li>
+            <li
+              data-bs-target="#carouselId"
+              data-bs-slide-to="2"
+              aria-label="Third slide"
+            ></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img
+                src="https://images.pexels.com/photos/1743165/pexels-photo-1743165.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                class="w-100 d-block"
+                alt="First slide"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.pexels.com/photos/91228/pexels-photo-91228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                class="w-100 d-block"
+                alt="Second slide"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                class="w-100 d-block"
+                alt="Third slide"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselId"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselId"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <!-- 🌼 Add carousel caption -->
+      <section class="p-5">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center g-5">
+                <div class="col">
+                    <a href="nationalpark.html" target="_blank">
+                        <div class="card w-100 bg-white text-white"  style="height: 200px;">
+                            
+                            <img src="https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img" alt="..." />
+                            
+                            <div class="card-img-overlay">
+                            <h1 class="card-title">National Parks</h1>
+                            <p class="card-text">
+                                Check out 
+                            </p>
+                            </div>
+                        </div>
+                    </a>
+         
+                </div>
+                <div class="col">
+                    <a href="mountains.html" target="_blank">
+                        <div class="card w-100 bg-white text-white"  style="height: 200px;">
+                                <img src="https://images.pexels.com/photos/720240/pexels-photo-720240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img" alt="..." />
+                            
+                            <div class="card-img-overlay">
+                            <h1 class="card-title">Mountains Information</h1>
+                            <p class="card-text">
+                                Learn more. 
+                            </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+      </section>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Javascript Files -->
+    <script src="scripts/locationData.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

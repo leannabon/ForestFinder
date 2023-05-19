@@ -1,0 +1,35 @@
+✅ Copy & paste a check next to completed items!
+
+Basic Requirements
+    1. Homepage
+        a) Highlights simple organization
+        b) Links to two pages
+            - National Parks Search Page
+            - Mountains Information Page
+    
+    2. National Parks Search Page
+        a) Search engine
+            - Search by location dropdown
+            - Search by park type dropdown
+            - Displays park details
+        b) Data is linked to file named: nationalParks.js
+
+    3. Mountains Information Page
+    // This page will NOT allow the user to search mountains using any type of filter.
+        a) User Interface with 48 different mountain details
+        b) Display Information should include:
+            - Mountain name
+            - Description
+            - Elevation
+            - *Other (optional) interesting infomation
+        c) Data linked to file named: mountain.js
+
+    4. *OPTIONAL stretch goals
+        a) National Parks
+            - "View All National Parks" option
+            - add "Visit" URL propery
+        b) Mountain Page
+            - Diplay Image of mountain w/ Information
+            - Display sunrise and sunset time using JS Fetch API
+
+
