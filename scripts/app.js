@@ -2,11 +2,9 @@
 
 window.onload = function () {
   //Load the location dropdown
-  initLocationDropdown();
   initNationParksDropdown();
+  initLocationsDropdown();
 };
-
-function initLocationDropdown() {}
 
 function initNationParksDropdown() {
   nationalParksArray.forEach((park) =>
@@ -14,7 +12,16 @@ function initNationParksDropdown() {
       .querySelector("#parktype")
       .add(new Option(park.LocationName, park.LocationName))
   );
-}
+};
+
+function initLocationsDropdown() {
+  locationsArray.forEach((location) =>
+    document
+      .querySelector("#statesDropdown")
+      .add(new Option(location, location))
+  );
+};
+
 
 function searchLocation() {
   //grab seach input van textbox always make it lowercase
@@ -27,5 +34,5 @@ function searchLocation() {
 
   alert(selectedState);
 
-  // Finding National PArk based on searchinput
-}
+  // Finding National Park based on searchinput
+};
