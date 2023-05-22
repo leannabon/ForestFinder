@@ -9,10 +9,10 @@ Basic Requirements
     
     2. National Parks Search Page
         a) Search engine
-            - Search by location dropdown
-            - Search by park type dropdown
+            ✅ Search by location dropdown
+            ✅ Search by park type dropdown
             - Displays park details
-        b) Data is linked to file named: nationalParks.js
+        ✅) Data is linked to file named: nationalParks.js
 
     3. Mountains Information Page
     // This page will NOT allow the user to search mountains using any type of filter.
@@ -32,4 +32,5 @@ Basic Requirements
             - Diplay Image of mountain w/ Information
             - Display sunrise and sunset time using JS Fetch API
 
-
+FOR REFERENCE:
+https://www.nationalparks.org/explore/parks?state=1616

@@ -13,18 +13,24 @@
         <nav>
             <ul>
                 <a href="index.html">Index</a>
-                <a href="nationpark.html">National park</a>
+                <a href="nationalpark.html">National park</a>
                 <a href="mountains.html">Mountains</a>
             </ul>
 
         </nav>
     </header>
     <main>
-        <select id="states"></select>
-        <select id="parktype"></select>
+        <select id="states" class="select-clear"></select>
+        <br>
+        <br>
 
-        <input type="text" name="searchLocation" id="inputLocation">
+        <input type="text" name="searchLocation" id="inputLocation" />
         <button type="button" onclick="searchLocation()">Search by location</button>
+        <select id="natParkdropdown" class="select-clear"></select>
+        <div id="cardContainer"></div>
+
+
+        
         <br>
         <br>
 
