@@ -32,5 +32,13 @@ Basic Requirements
             - Diplay Image of mountain w/ Information
             - Display sunrise and sunset time using JS Fetch API
 
+
+    TO DO:
+    - update head (c/p from index) to add favicon
+    - Fix dropdown menu to display one single 
+
 FOR REFERENCE:
 https://www.nationalparks.org/explore/parks?state=1616
+
+Add three.js tree interactive:
+https://douges.dev/blog/threejs-trees-1 

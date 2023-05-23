@@ -2,15 +2,27 @@
 <html lang="en">
   <head>
     <title>ForestFinder - Enjoy the outdoors</title>
-    <!-- 🌼 Insert Favicon -->
 
-    <!-- Required meta tags -->
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS v5.2.1 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
@@ -18,13 +30,17 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+
+
   </head>
 
   <body>
     <header>
       <nav class="navbar navbar-expand-sm navbar-dark bg-success">
         <div class="container">
-          <a class="navbar-brand" href="#">ForestFinder</a>
+          <a class="navbar-brand" href="index.html">
+            <img src="favicon/favicon-32x32.png" />
+            ForestFinder</a>
           <button
             class="navbar-toggler d-lg-none"
             type="button"
@@ -44,7 +60,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="nationalpark.html">National Park</a>
+                <a class="nav-link" href="nationalpark.html">National Parks</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="mountains.html">Mountains</a>
@@ -73,7 +89,7 @@
         - 🌼 Add carousel caption
         - 🌼 Center Images
       -->
-      <section>
+      <section id="carouselSect">
         <div
           id="carouselExampleCaptions"
           class="carousel slide"
@@ -156,8 +172,12 @@
           </button>
         </div>
       </section>
+
+      <!--Fluffy Tree Interactive-->
+      <script type="module" src="/main.js"></script>
+
       <!--ABOUT COMPANY-->
-      <section class="p-5 text-center">
+      <section id="aboutSect" class="p-5 text-center">
         <div class="row justify-content-center align-items-center g-2">
           <div class="col">
             <h1>About Us</h1>
@@ -169,7 +189,7 @@
       </section>
 
       <!-- ✅CARD LINKS-->
-      <section class="p-5">
+      <section id="cardSect" class="p-5">
         <div class="container-fluid">
           <div class="row justify-content-center align-items-center g-5">
             <div class="col">
@@ -214,6 +234,7 @@
         </div>
       </section>
     </main>
+
     <footer>
       <!-- place footer here -->
     </footer>
@@ -224,7 +245,6 @@
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
       crossorigin="anonymous"
     ></script>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
@@ -234,5 +254,7 @@
     <!-- Javascript Files -->
     <script src="scripts/locationData.js"></script>
     <script src="scripts/app.js"></script>
+    <!--Three.js File-->
+    <script src="main.js"></script>
   </body>
 </html>
