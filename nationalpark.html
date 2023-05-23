@@ -49,12 +49,18 @@
   </header>
 
   <main class="p-5">
-    <select id="states" class="select-clear"></select>
+    Park Types: <select id="parkTypesDD" class="select-clear" selected="selected"></select>
     <br>
     <br>
-    <select id="natParkdropdown" class="select-clear" selected="selected"></select>
-    <input type="text" name="searchLocation" id="inputLocation" />
-    <button type="button" onclick="searchLocation()">Search by location</button>
+    States: <select id="statesDD" class="select-clear"></select>
+    <br>
+    <br>
+    Parks: <select id="natParksDD" class="select-clear" selected="selected"></select>
+    <br>
+    <br>
+    <input type="checkbox">
+    
+    <button type="button" onclick="searchLocation()">Search</button>
 
     <br>
     <br>
@@ -79,7 +85,7 @@
   <script src="scripts/locationData.js"></script>
   <script src="scripts/parkTypeData.js"></script>
   <script src="scripts/nationalParkData.js"></script>
-  <script src="scripts/app.js"></script>
+  <script src="scripts/app2.js"></script>
 
 </body>
 

@@ -1,19 +1,39 @@
 "use strict";
 
 window.onload = function () {
-  initLocationsDropdown();
-  initNationParksDropdown();
+  initparkTypeDD();
+  initLocationsDD();
+  initNationParksDropdown(defaultOption);
 
 };
 
-  /*Global Scoped Variables */
-  const selectElements = document.querySelectorAll('.select-clear');
-  const cardContainer = document.getElementById("cardContainer");
-  const statesDD = document.getElementById("states");
-  const natParksDD = document.getElementById("natParkdropdown");
+/*Global Scoped Variables */
+const selectElements = document.querySelectorAll('.select-clear');
+const cardContainer = document.getElementById("cardContainer");
+const parkTypeDD = document.getElementById("states");
+const statesDD = document.getElementById("states");
+const natParksDD = document.getElementById("natParkdropdown");
 
+  /*DROPDOWNS */
+  function initparkTypeDD() {
 
-function initLocationsDropdown() {
+    //Setting default option
+    const defaultOption = new Option("Select one...", "null");
+    statesDD.add(defaultOption);
+  
+    locationsArray.forEach((location) =>
+      document
+        .querySelector("#states")
+        .add(new Option(location, location))
+    );
+  };
+  
+function initLocationsDD() {
+
+  //Setting default option
+  const defaultOption = new Option("Select one...", "null");
+  statesDD.add(defaultOption);
+
   locationsArray.forEach((location) =>
     document
       .querySelector("#states")
@@ -21,7 +41,14 @@ function initLocationsDropdown() {
   );
 };
 
+
 function initNationParksDropdown(selectedState) {
+  
+  //Setting default option
+  const defaultOption = new Option("Select one...", "null");
+  natParksDD.innerHTML = "";
+  natParksDD.add(defaultOption);
+
   // Filter the nationalParksArray based on the selected state
   const filteredParks = nationalParksArray.filter((park) => park.State === selectedState);
 
@@ -48,61 +75,60 @@ function searchLocation() {
 }
 
 
-  /*Displaying Info based off of selected value*/
-  statesDD.addEventListener("change", function () {
-    const selectedValue = this.value;
-  
-    // Call the initialization function to get the updated array
-    const updatedArray = initNationParksDropdown(selectedValue);
-  
-    // Clear the existing card container content
-    cardContainer.innerHTML = "";
-  
-    // Create a row element with Bootstrap classes
-    const rowHTML = '<div class="row row-cols-2 g-3">';
-  
-    // Create card elements for each park
-    const cardsHTML = updatedArray.map((park) => {
-      // Create the card HTML content
-      let cardHTML = `<div class="col">
+/*Displaying Info based off of selected value*/
+statesDD.addEventListener("change", function () {
+  const selectedValue = this.value;
+
+  // Call the initialization function to get the updated array
+  const updatedArray = initNationParksDropdown(selectedValue);
+
+  // Clear the existing card container content
+  cardContainer.innerHTML = "";
+
+  // Create a row element with Bootstrap classes
+  const rowHTML = '<div class="row row-cols-2 g-3">';
+
+  // Create card elements for each park
+  const cardsHTML = updatedArray.map((park) => {
+    // Create the card HTML content
+    let cardHTML = `<div class="col">
         <div class="card mb-3 h-100 border-success text-success">
           <div class="card-body">`;
-  
-      // Check if the 'visit' property is defined before creating the anchor element
-      if (park.Visit !== undefined) {
-        cardHTML += `<h5 class="card-title"><a href="${park.Visit}" class="text-success" style="text-decoration: none;" target="_blank">${park.LocationName}🔗</a></h5>`;
-      } else {
-        cardHTML += `<h5 class="card-title">${park.LocationName}</h5>`;
-      }
 
-      // Check if the 'Address' property is defined
-      if (park.Address !== 0) {
-        cardHTML += `<p class="card-text">${park.Address}</p>`
-      } else {
-        cardHTML += ``;
-      }  
+    // Check if the 'visit' property is defined before creating the anchor element
+    if (park.Visit !== undefined) {
+      cardHTML += `<h5 class="card-title"><a href="${park.Visit}" class="text-success" style="text-decoration: none;" target="_blank">${park.LocationName}🔗</a></h5>`;
+    } else {
+      cardHTML += `<h5 class="card-title">${park.LocationName}</h5>`;
+    }
 
-      cardHTML += `<p class="card-text">${park.City}, ${park.State}</p>`
-      if (park.ZipCode !== 0) {
-        cardHTML += `<p class="card-text">${park.ZipCode}</p>`
-      } else {
-        cardHTML += ``;
-      }  
-      cardHTML += 
+    // Check if the 'Address' property is defined
+    if (park.Address !== 0) {
+      cardHTML += `<p class="card-text">${park.Address}</p>`
+    } else {
+      cardHTML += ``;
+    }
+
+    cardHTML += `<p class="card-text">${park.City}, ${park.State}</p>`
+    if (park.ZipCode !== 0) {
+      cardHTML += `<p class="card-text">${park.ZipCode}</p>`
+    } else {
+      cardHTML += ``;
+    }
+    cardHTML +=
       `</div>
       </div>
       </div>`;
-  
-      return cardHTML;
-    });
-  
-    // Concatenate the card HTML strings
-    const cardsContainerHTML = cardsHTML.join('');
-  
-    // Concatenate the row and card container HTML strings
-    const finalHTML = rowHTML + cardsContainerHTML + '</div>';
-  
-    // Set the innerHTML of the card container
-    cardContainer.innerHTML = finalHTML;
+
+    return cardHTML;
   });
-  
+
+  // Concatenate the card HTML strings
+  const cardsContainerHTML = cardsHTML.join('');
+
+  // Concatenate the row and card container HTML strings
+  const finalHTML = rowHTML + cardsContainerHTML + '</div>';
+
+  // Set the innerHTML of the card container
+  cardContainer.innerHTML = finalHTML;
+});
