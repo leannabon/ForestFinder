@@ -7,6 +7,8 @@ const parkTypesDD = document.getElementById("parkTypesDD");
 const statesDD = document.getElementById("statesDD");
 const allNatParksDD = document.getElementById("natParksDD");
 
+
+
     // Get the checkbox values
     const parkTypeCheckbox = document.getElementById("parkTypeCheckbox");
     const stateCheckbox = document.getElementById("stateCheckbox");
