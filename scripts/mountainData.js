@@ -529,6 +529,10 @@ const mountainsArray = [
   },
 ];
 
+window.onload = function () {
+  initMountainCards();
+}
+
 const mountainsContainer = document.getElementById("mountainsContainer");
 
 function initMountainCards() {
@@ -549,8 +553,4 @@ function initMountainCards() {
     cardElement.innerHTML = cardHTML;
     mountainsContainer.appendChild(cardElement);
 });
-}
-
-window.onload = function () {
-  initMountainCards();
-}
+};

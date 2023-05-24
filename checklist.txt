@@ -16,20 +16,20 @@ Basic Requirements
 
     3. Mountains Information Page
     // This page will NOT allow the user to search mountains using any type of filter.
-        a) User Interface with 48 different mountain details
-        b) Display Information should include:
+        ✅) User Interface with 48 different mountain details
+        ✅) Display Information should include:
             - Mountain name
             - Description
             - Elevation
             - *Other (optional) interesting infomation
-        c) Data linked to file named: mountain.js
+        ✅) Data linked to file named: mountainData.js
 
     4. *OPTIONAL stretch goals
-        a) National Parks
-            - "View All National Parks" option
-            - add "Visit" URL propery
-        b) Mountain Page
-            - Diplay Image of mountain w/ Information
+        ✅) National Parks
+            ✅ "View All National Parks" option
+            ✅ add "Visit" URL propery
+        ✅) Mountain Page
+            ✅ Diplay Image of mountain w/ Information
             - Display sunrise and sunset time using JS Fetch API
 
 

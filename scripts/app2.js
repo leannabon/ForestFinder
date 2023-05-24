@@ -39,7 +39,11 @@ function createParkCard(park) {
     }
     cardHTML += `<p class="card-text">${park.City}, ${park.State}</p>`;
     if (park.ZipCode) {
-        cardHTML += `<p class="card-text">${park.ZipCode}</p>`;
+        cardHTML += `<p class="card-text">Zip Code: ${park.ZipCode}</p>`;
+    }
+
+    if (park.Visit) {
+        cardHTML += `<p class="card-text"><a href="${park.Visit}">Visit their website!</a></p>`;
     }
 
     cardHTML += `</div>
