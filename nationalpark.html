@@ -3,22 +3,39 @@
 
 <head>
   <title>ForestFinder - Enjoy the outdoors</title>
-  <!-- 🌼 Insert Favicon -->
 
-  <!-- Required meta tags -->
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff"> <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+  <!--Google Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+
+
 </head>
+
 
 <body>
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-success">
       <div class="container">
-        <a class="navbar-brand" href="#">ForestFinder</a>
+        <a class="navbar-brand" href="index.html">
+          <img src="favicon/favicon-32x32.png" />
+          ForestFinder</a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
           aria-label="Toggle navigation">
@@ -31,7 +48,7 @@
                   class="visually-hidden">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="nationalpark.html">National Park</a>
+              <a class="nav-link" href="nationalpark.html">National Parks</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="mountains.html">Mountains</a>
@@ -49,21 +66,29 @@
   </header>
 
   <main class="p-5">
-    Park Types: <select id="parkTypesDD" class="select-clear" selected="selected"></select>
-    <br>
-    <br>
-    States: <select id="statesDD" class="select-clear"></select>
-    <br>
-    <br>
-    Parks: <select id="natParksDD" class="select-clear" selected="selected"></select>
-    <br>
-    <br>
-    <input type="checkbox">
-    
-    <button type="button" onclick="searchLocation()">Search</button>
+    <section>
+      <h3>Scroll through our park names!</h3>
+      Park Name: <select id="natParksDD" class="select-clear" selected="selected"></select>
+      <br>
+      <br>
+    </section>
+    <section>
+      <h3>Search by Park Type and/or States</h3>
+      <div class="row ${1| ,row-cols-2,row-cols-3, auto,justify-content-md-center,|}">
+        <div class="col ">
+          Park Types: <select id="parkTypesDD" class="select-clear" selected="selected"></select>
+        </div>
+        <div class="col ">
+          States: <select id="statesDD" class="select-clear"></select>
+        </div>
+      </div>
+      <span>
+        <input id="parkTypeCheckbox" type="checkbox">Park Type
+        <input id="stateCheckbox" type="checkbox">State
+        <button id="filterBtn" type="button" onclick="filterNationalParks()">Search!</button>
+      </span>
+    </section>
 
-    <br>
-    <br>
     <div id="cardContainer"></div>
 
 
