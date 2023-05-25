@@ -1,3 +1,5 @@
+
+/*Google Font*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap');
 
 *,
@@ -16,16 +18,20 @@ body {
 }
 
 .logo {
-    width: 75px;
+    width: 150px;
 }
 
-.header {
+header {
+    position: absolute;
+    z-index: 9999;
     width: 100%;
+    padding: 0.9rem 0;
+    top: 0;
+    left: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 header nav {
-    background-color: black;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -101,6 +107,19 @@ li {
     transform: translateX(30%);
 }
 
+main {
+    background-color: #353;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+}
+
+
+
+
+
+/*Orginal Index*/
 form {
     text-align: center;
 }
@@ -114,3 +133,4 @@ form {
     width: 100%;
     max-height: 300px !important;
 }
+
