@@ -42,3 +42,9 @@ https://www.nationalparks.org/explore/parks?state=1616
 
 Add three.js tree interactive:
 https://douges.dev/blog/threejs-trees-1 
+
+Parallax scroll:
+https://codepen.io/DuskoStamenic/pen/ZEvBKdw 
+
+Animation library:
+https://animate.style/
