@@ -11,17 +11,17 @@ Basic Requirements
         a) Search engine
             ✅ Search by location dropdown
             ✅ Search by park type dropdown
-            - Displays park details
+            ✅ Displays park details
         ✅) Data is linked to file named: nationalParks.js
 
     3. Mountains Information Page
     // This page will NOT allow the user to search mountains using any type of filter.
         ✅) User Interface with 48 different mountain details
         ✅) Display Information should include:
-            - Mountain name
-            - Description
-            - Elevation
-            - *Other (optional) interesting infomation
+            ✅ Mountain name
+            ✅ Description
+            ✅ Elevation
+            ✅ *Other (optional) interesting infomation
         ✅) Data linked to file named: mountainData.js
 
     4. *OPTIONAL stretch goals
@@ -30,7 +30,7 @@ Basic Requirements
             ✅ add "Visit" URL propery
         ✅) Mountain Page
             ✅ Diplay Image of mountain w/ Information
-            - Display sunrise and sunset time using JS Fetch API
+            ✅ Display sunrise and sunset time using JS Fetch API
 
 
     TO DO:
