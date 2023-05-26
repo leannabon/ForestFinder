@@ -44,7 +44,7 @@ function createParkCard(park) {
     }
 
     if (park.Visit) {
-        cardHTML += `<p class="card-text"><a href="${park.Visit}">Visit their website!</a></p>`;
+        cardHTML += `<p class="card-text"><a href="${park.Visit}"><button type="button" class="btn btn-outline-warning">Visit their website!</button></a></p>`;
     }
 
     cardHTML += `</div>

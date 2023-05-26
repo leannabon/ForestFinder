@@ -48,3 +48,9 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 
 Animation library:
 https://animate.style/
+
+Responsive 3d Cards:
+https://www.codewithfaraz.com/content/146/responsive-3d-cards-with-html-css-javascript-code-snippets-included
+
+Parallax FX: 
+https://www.youtube.com/watch?v=Yo3j_Dx4u7c&t=2094s
