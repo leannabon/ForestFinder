@@ -16,7 +16,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/nationalpark.css" />
+  <link rel="stylesheet" href="css/cardStyle.css" />
   <!--Google Font-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,78 +26,84 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
 
-
 </head>
 
 
-<body>
+<body class="vignette">
   <header>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-success">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="favicon/favicon-32x32.png" />
-          ForestFinder</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html" aria-current="page">Home <span
-                  class="visually-hidden">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="nationalpark.html">National Parks</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="mountains.html">Mountains</a>
-            </li>
-          </ul>
-          <form class="d-flex my-2 my-lg-0">
-            <input class="form-control me-sm-2" type="text" placeholder="Search" />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div>
+    <nav>
+      <a href="forestFinderHome.html"><img src="favicon/LOGO_ForestFinder.png" alt="ForestFinder Logo" class="logo"></a>
+      <ul>
+        <li>
+          <a href="nationalpark.html">National Parks</a>
+        </li>
+        <li>
+          <a href="mountains.html">Mountains</a>
+        </li>
+        <li class="search">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+              viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+          </a>
+        </li>
+        <li class="hamburger">
+          <a href="#">
+            <div class="bar"></div>
+          </a>
+        </li>
+      </ul>
+
     </nav>
   </header>
-
-  <main class="p-5">
-    <section>
-      <h3>Scroll through our park names!</h3>
-      Park Name: <select id="natParksDD" class="select-clear" selected="selected"></select>
+  <!--Video BG-->
+  <video autoplay muted loop id="myVideo" >
+    <source src="forestART/ForestVidBG.mp4" type="video/mp4">
+  </video>
+  
+  <div class="content">
+    <main class="p-5">
+      <section id="firstSection">
+        
+        <h3>Scroll through our park names!</h3>
+        Park Name: <select id="natParksDD" class="select-clear form-select" selected="selected"></select>
+        <br>
+        <br>
+      </section>
+      <h6>OR</h6>
+      <section>
+        <h3>Search by</h3>
+        <div class="row ${1| ,row-cols-2,row-cols-3, auto,justify-content-md-center,|}">
+          <div class="col ">
+            <input id="parkTypeCheckbox" type="checkbox">
+            Park Types: <select id="parkTypesDD" class="select-clear form-select" selected="selected"></select>
+          </div>
+          <div class="col ">
+            <input id="stateCheckbox" type="checkbox">
+            States: <select id="statesDD" class="select-clear form-select"></select>
+          </div>
+        </div>
+        <span>
+          <br>
+          <br>
+          <br>
+          <button id="filterBtn" type="button" onclick="filterNationalParks()" class="btn btn-outline-light btn-lg">View Parks</button>
+        </span>
+      </section>
+  
+      <div id="cardContainer"></div>
+  
+  
+  
       <br>
       <br>
-    </section>
-    <section>
-      <h3>Search by Park Type and/or States</h3>
-      <div class="row ${1| ,row-cols-2,row-cols-3, auto,justify-content-md-center,|}">
-        <div class="col ">
-          Park Types: <select id="parkTypesDD" class="select-clear" selected="selected"></select>
-        </div>
-        <div class="col ">
-          States: <select id="statesDD" class="select-clear"></select>
-        </div>
-      </div>
-      <span>
-        <input id="parkTypeCheckbox" type="checkbox">Park Type
-        <input id="stateCheckbox" type="checkbox">State
-        <button id="filterBtn" type="button" onclick="filterNationalParks()">View Parks</button>
-      </span>
-    </section>
-
-    <div id="cardContainer"></div>
+  
+    </main>
+  </div>
 
 
-
-    <br>
-    <br>
-
-  </main>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -111,6 +118,8 @@
   <script src="scripts/parkTypeData.js"></script>
   <script src="scripts/nationalParkData.js"></script>
   <script src="scripts/app2.js"></script>
+  <script src="scripts/card.js"></script>
+
 
 </body>
 

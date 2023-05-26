@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ForestFinder - Enjoy the outdoors</title>
+      
+        <!--Favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff"> <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="css/nationalpark.css" />
+        
+        <!--Google Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+      
+      
+      </head>
+<body>
+    <header>
+        <nav>
+          <img src="favicon/LOGO_ForestFinder.png" alt="ForestFinder Logo" class="logo">
+          <ul>
+            <li>
+              <a href="nationalpark.html">National Parks</a>
+            </li>
+            <li>
+              <a href="mountains.html">Mountains</a>
+            </li>
+            <li class="search">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+              </a>
+            </li>
+            <li class="hamburger">
+              <a href="#">
+                <div class="bar"></div>
+              </a>
+            </li>
+          </ul>
+    
+        </nav>
+      </header>
+
+      <main>Stuff goes here
+
+        <section>
+            <h3>Scroll through our park names!</h3>
+            Park Name: <select id="natParksDD" class="select-clear" selected="selected"></select>
+            <br>
+            <br>
+          </section>
+          <section>
+            <h3>Search by Park Type and/or States</h3>
+            <div class="row ${1| ,row-cols-2,row-cols-3, auto,justify-content-md-center,|}">
+              <div class="col ">
+                Park Types: <select id="parkTypesDD" class="select-clear" selected="selected"></select>
+              </div>
+              <div class="col ">
+                States: <select id="statesDD" class="select-clear"></select>
+              </div>
+            </div>
+            <span>
+              <input id="parkTypeCheckbox" type="checkbox">Park Type
+              <input id="stateCheckbox" type="checkbox">State
+              <button id="filterBtn" type="button" onclick="filterNationalParks()">View Parks</button>
+            </span>
+          </section>
+      
+          <div id="cardContainer"></div>
+      
+      
+      
+          <br>
+          <br>
+      
+      </main>
+
+        <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+  crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+  integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+  crossorigin="anonymous"></script>
+
+<!-- Javascript Files -->
+<script src="scripts/locationData.js"></script>
+<script src="scripts/parkTypeData.js"></script>
+<script src="scripts/nationalParkData.js"></script>
+<script src="scripts/app2.js"></script>
+</body>
+</html>

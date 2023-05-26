@@ -30,8 +30,9 @@ function initDropdown(dropdownId, dataArray, textProp, valueProp) {
 
 /*Card Generation */
 function createParkCard(park) {
-    let cardHTML = `<div class="card mb-3 h-100 border-primary text-primary">
-      <div class="card-body">
+    let cardHTML = `<div class="card">
+    <div class="shadow" style="--url: url('https://i.ibb.co/PM4ghD4/full.png')"></div>
+      <div class="content">
         <h5 class="card-title">${park.LocationName}</h5>`;
 
     if (park.Address) {
