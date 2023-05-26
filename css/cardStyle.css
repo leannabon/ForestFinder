@@ -13,7 +13,7 @@
   height: 28rem;
   width: 20rem;
   aspect-ratio: 5/7;
-  color: #ffffff;
+  color: white;
   perspective: 50rem;
 }
 .card .shadow {
@@ -79,12 +79,12 @@
 
 h2 {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 0.5rem;
-  text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  text-shadow: 10px 10px 1rem rgba(0, 0, 0, 0.9);
 }
 
 p {
   font-weight: 300;
-  text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  text-shadow: 10px 10px 1rem rgba(0, 0, 0, 0.9);
 }

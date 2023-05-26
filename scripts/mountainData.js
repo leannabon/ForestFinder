@@ -538,19 +538,22 @@ const mountainsContainer = document.getElementById("mountainsContainer");
 function initMountainCards() {
 
   mountainsArray.forEach(mountain => {
-  let cardHTML = `<div class="card mb-3 h-100 border-primary text-primary">
-    <div class="card-body">
-    <img src="images/${mountain.img}">
-      <h5 class="card-title">${mountain.name}</h5>
-      <p class="card-text">${mountain.elevation}</p>
-      <p class="card-text">${mountain.effort}</p>
-      <p class="card-text">${mountain.desc}</p>
-      <p class="card-text">Lat: ${mountain.coords.lat} Lng: ${mountain.coords.lng}</p>
+    let cardHTML = `<div class="centered">
+    <div class="card">
+    <div class="shadow" style="background-image: url('images/${mountain.img}')"></div>
+      <div class="image background" style="background-image: url('images/${mountain.img}')"></div>
+      <div class="content">
+        <h5 class="card-title">${mountain.name}</h5>
+        <p class="card-text">${mountain.elevation}</p>
+        <p class="card-text">${mountain.effort}</p>
+        <p class="card-text">${mountain.desc}</p>
+        <p class="card-text">Lat: ${mountain.coords.lat} Lng: ${mountain.coords.lng}</p>
       </div>
-    </div>`;
+      </div>
+      </div>`;
 
     const cardElement = document.createElement("div");
     cardElement.innerHTML = cardHTML;
     mountainsContainer.appendChild(cardElement);
-});
+  });
 };

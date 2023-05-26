@@ -24,6 +24,7 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cardStyle.css" />
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
@@ -39,7 +40,8 @@
 
     <header>
         <nav>
-            <a href="forestFinderHome.html"><img src="favicon/LOGO_ForestFinder.png" alt="ForestFinder Logo" class="logo"></a>
+            <a href="forestFinderHome.html"><img src="favicon/LOGO_ForestFinder.png" alt="ForestFinder Logo"
+                    class="logo"></a>
             <ul>
                 <li>
                     <a href="nationalpark.html">National Parks</a>
@@ -49,9 +51,11 @@
                 </li>
                 <li class="search">
                     <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
                     </a>
                 </li>
                 <li class="hamburger">
@@ -80,6 +84,37 @@
         <img src="forestART/Cliff1.png" data-speedx="0.05" data-speedy="0.05" class="parallax cliff1">
 
     </main>
+    <section>
+        <div class="centered p-5">
+            <a href="natParks.html">
+                <div class="card">
+                    <div class="shadow" style="--url: url('https://i.ibb.co/PM4ghD4/full.png')"></div>
+                    <div class="image background" style="--url: url('https://i.ibb.co/JpJVJxq/Background.png')"></div>
+                    <div class="image cutout"
+                        style="--url: url('https://www.pngmart.com/files/17/Forest-Tree-Transparent-PNG.png')"></div>
+                    <div class="content">
+                        <h2>National Parks</h2>
+                        <p>Explore and find the park that is nearest to you...</p>
+                    </div>
+                </div>
+            </a>
+            <a href="mountains.html">
+                <div class="card ">
+                    <div class="shadow" style="--url: url('https://i.ibb.co/DC0MbxS/m-full.png')"></div>
+                    <div class="image background" style="--url: url('https://i.ibb.co/ZdGBm4K/m-background.png')"></div>
+                    <div class="image cutout"
+                        style="--url: url('https://i.pinimg.com/originals/1d/8e/fe/1d8efe928eae32e7489bb0cca0fdf1d7.png')">
+                    </div>
+                    <div class="content">
+                        <h2>Mountains</h2>
+                        <p>Learn more about this country's mountains.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <script src="scripts/card.js"></script>
+    </section>
+
     <footer>
         <!-- place footer here -->
     </footer>
